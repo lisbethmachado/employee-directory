@@ -1,13 +1,36 @@
-import React from 'react';
-
+import React, { useState } from 'react';
+import axios from 'axios';
+import "bootstrap/dist/css/bootstrap.css";
 
 function App() {
+  const [employees, setEmployees] = useState([]);
+
+  //   const getEmployeeList = () => axios.get(
+  //     "https://randomuser.me/api/?results=50&nat=us"
+  //   ).then((res) => {
+  //     console.log(res.data.result)
+  //     const employeeData = res.data.results
+  //     setEmployees([...employees, employeeData])
+  //   })
+  // }
+
+  function getEmployeeList() {
+    axios.get(
+      "https://randomuser.me/api/?results=50&nat=us"
+    ).then((res) => {
+      console.log(res.data.result)
+      const employeeData = res.data.result
+      setEmployees(...employees, employeeData)
+    })
+  }
+
   return (
     <div className="App">
       <header className="App-header">
         <h1>This will be an Employee Directory app.</h1>
-        <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.</p>
       </header>
+      <h5>Search employee directory:</h5>
+      <button onClick={getEmployeeList}>Click Me!</button>
     </div>
   );
 }
