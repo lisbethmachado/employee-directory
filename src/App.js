@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import "bootstrap/dist/css/bootstrap.css";
+import EmployeeTable from './components/EmployeeTable';
+import SearchForm from './components/SearchForm';
 
 function App() {
-  const [employees, setEmployees] = useState([]);
+  // const [employees, setEmployees] = useState();
 
   //   const getEmployeeList = () => axios.get(
   //     "https://randomuser.me/api/?results=50&nat=us"
@@ -14,15 +15,15 @@ function App() {
   //   })
   // }
 
-  function getEmployeeList() {
-    axios.get(
-      "https://randomuser.me/api/?results=50&nat=us"
-    ).then((res) => {
-      console.log(res.data.result)
-      const employeeData = res.data.result
-      setEmployees(...employees, employeeData)
-    })
-  }
+  // function getEmployeeList() {
+  //   axios.get(
+  //     "https://randomuser.me/api/?results=50&nat=us"
+  //   ).then((res) => {
+  //     console.log(res.data.results)
+  //     const employeeData = res.data.results
+  //     setEmployees(employeeData)
+  //   })
+  // }
 
   return (
     <div className="App">
@@ -30,7 +31,9 @@ function App() {
         <h1>This will be an Employee Directory app.</h1>
       </header>
       <h5>Search employee directory:</h5>
-      <button onClick={getEmployeeList}>Click Me!</button>
+       <SearchForm/>
+       <EmployeeTable/>
+       
     </div>
   );
 }
