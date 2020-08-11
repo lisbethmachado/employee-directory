@@ -26,7 +26,7 @@ function App() {
   // }
 
   return (
-    <div className="App">
+    <div className="container">
       <header className="App-header">
         <h1>This will be an Employee Directory app.</h1>
       </header>
