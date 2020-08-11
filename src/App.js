@@ -33,7 +33,10 @@ function App() {
         <h1>This will be a Plant Directory app.</h1>
       </header>
       <h5>Search plants directory:</h5>
-       <SearchForm/>
+       <SearchForm 
+       value={search}
+       onChange={event => setSearch(event.target.value)}
+      />
        <PlantsTable plants={plants}/>
        
     </div>
