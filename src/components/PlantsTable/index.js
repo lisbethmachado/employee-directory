@@ -1,16 +1,16 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-// import "./style.css";
 
-function EmployeeTable() {
+function PlantsTable({ plants }) {
+  console.log(plants)
   return (
-    <table class="table table-striped">
+    <table className="table table-striped">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">First</th>
       <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Species</th>
     </tr>
   </thead>
   <tbody>
@@ -37,4 +37,4 @@ function EmployeeTable() {
   );
 }
 
-export default EmployeeTable;
+export default PlantsTable;
