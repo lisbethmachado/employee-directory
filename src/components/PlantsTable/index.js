@@ -2,8 +2,6 @@ import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 function PlantsTable({ plants }) {
-  console.log(plants[0].name)
-  console.log(plants[0].species)
   return (
     <table className="table table-striped">
       <thead>
@@ -14,9 +12,8 @@ function PlantsTable({ plants }) {
       </thead>
       <tbody>
         {plants.map((plant) => {
-          let i;
           return (
-            <tr key={plant[i]}>
+            <tr key={plant.id}>
               <td>{plant.name}</td>
               <td>{plant.species}</td>
             </tr>
