@@ -1,12 +1,12 @@
-import plants from './plants.json';
+import plantsJson from './plants.json';
 import React, { useState } from 'react';
 import axios from 'axios';
 import PlantsTable from './components/PlantsTable';
 import SearchForm from './components/SearchForm';
 
 function App() {
-  // const [search, setSearch] = useState("");
-  // const [plants, setPLants] = useState(plants.Jason);
+  const [search, setSearch] = useState("");
+  const [plants, setPLants] = useState(plantsJson);
 
   //   const getEmployeeList = () => axios.get(
   //     "https://randomuser.me/api/?results=50&nat=us"
@@ -34,7 +34,7 @@ function App() {
       </header>
       <h5>Search plants directory:</h5>
        <SearchForm/>
-       <PlantsTable plants ={plants}/>
+       <PlantsTable plants={plants}/>
        
     </div>
   );

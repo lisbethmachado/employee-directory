@@ -1,7 +1,4 @@
-{
-  "description": "List of plants by common name",
-  "source": "https://en.wikipedia.org/wiki/List_of_plants_by_common_name",
-  "plants": [
+[
     {
       "name": "Alder",
       "species": "Alnus"
@@ -2523,4 +2520,3 @@
       "species": "Curcuma zedoaria"
     }
   ]
-}
