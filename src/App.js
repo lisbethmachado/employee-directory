@@ -1,5 +1,7 @@
 import plantsJson from './plants.json';
 import React, { useState } from 'react';
+import './App.css';
+import "bootstrap/dist/css/bootstrap.min.css";
 import PlantsTable from './components/PlantsTable';
 import SearchForm from './components/SearchForm';
 
